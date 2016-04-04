@@ -32,8 +32,8 @@ function postMessage() {
     "Sorry I have rehearsal",
     "Sorry I'm at rehearsal",
     "I had me a boy turned into a man",
-    "SymSys",
-    "Paris",
+    "I'm majoring in SymSys",
+    "I'm in Paris",
     "Baguette",
     "oui",
     "Hey, fuck you, buddy",
@@ -44,6 +44,7 @@ function postMessage() {
     "Sops on top!",
     "Come drink chamomile tea and read checkhov with me",
     "Anyone else auditioning for the show this quarter?",
+    "Can't argue with that",
   "( .o.)"
   ];
 
