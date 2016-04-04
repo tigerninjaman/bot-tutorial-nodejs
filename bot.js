@@ -21,7 +21,8 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  botResponse = getRandomDeveloperExcuse();
+  botResponse = cool();
+  //ideally, want to either have it equal something else or just edit cool
 
   options = {
     hostname: 'api.groupme.com',
@@ -53,7 +54,7 @@ function postMessage() {
   botReq.end(JSON.stringify(body));
 }
 
-//test
+//test - unclear on why it doesn't work
 var getHttp = require('../utils').getHttp;
 
 var getRandomDeveloperExcuse = function (cb) {
