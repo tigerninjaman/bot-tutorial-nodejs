@@ -3,29 +3,26 @@ var cool = require('cool-ascii-faces');
 
 var botID = process.env.BOT_ID;
 
-//begin
-var getHttp = require('../utils').getHttp;
 
-var getRandomDeveloperExcuse = function (cb) {
-  getHttp({
-    hostname: 'developerexcuses.com',
-    path: '/',
-    method: 'GET'
-  }, function onResult(statusCode, data) {
-    // adapted from https://github.com/github/hubot-scripts/blob/master/src/scripts/excuse.coffee#L55
-    var matches = data.match(/<a [^>]+>(.+)<\/a>/i);
-    if (matches && matches[1]) {
-      cb(matches[1]);
-    } else {
-      cb('');
-    }
-  }, function onError() {
-    cb('');
-  });
-};
+function respond() {
+  var request = JSON.parse(this.req.chunks[0]),
+      botRegex = /^\/ellenbot$/;
 
-var getRandomDesignerExcuse = (function () {
-  // Taken from http://designerexcuses.com/js/excuses.js
+  if(request.text && botRegex.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage();
+    this.res.end();
+  } else {
+    console.log("don't care");
+    this.res.writeHead(200);
+    this.res.end();
+  }
+}
+
+function postMessage() {
+  var botResponse, options, body, botReq;
+  
+  //begin
   var quotes = [
     "That won’t fit the grid.",
     "That’s not in the wireframes.",
@@ -66,55 +63,9 @@ var getRandomDesignerExcuse = (function () {
     "I don’t care if they don’t have a recent browser, this is 2013!",
     "It’s a responsive layout, of course it has widows."
   ];
+  //end
 
-  return function (cb) {
-    cb(quotes[Math.floor(Math.random() * quotes.length)]);
-  };
-})();
-
-module.exports = function (registerCommand) {
-  registerCommand(
-    'excuse',
-    'excuse [designer]: Get a random developer or designer excuse',
-    function (groupLocalID, userDisplayName, msgTokens, callback) {
-      if (msgTokens[0] === 'designer') {
-        getRandomDesignerExcuse(function (excuse) {
-          if (excuse) {
-            callback('Designer excuse: ' + excuse);
-          }
-        });
-      } else {
-        getRandomDeveloperExcuse(function (excuse) {
-          if (excuse) {
-            callback('Developer excuse: ' + excuse);
-          }
-        });
-      }
-    }
-  );
-};
-
-//end
-
-function respond() {
-  var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/ellenbot$/;
-
-  if(request.text && botRegex.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage();
-    this.res.end();
-  } else {
-    console.log("don't care");
-    this.res.writeHead(200);
-    this.res.end();
-  }
-}
-
-function postMessage() {
-  var botResponse, options, body, botReq;
-
-  botResponse = getRandomDesignerExcuse();
+  botResponse = quotes[Math.floor(Math.random() * quotes.length)];
   //ideally, want to either have it equal something else or just edit cool
 
   options = {
