@@ -26,6 +26,7 @@ function postMessage() {
     "Oui oui",
     "k",
     "GovCo is so far",
+    "I'm from Chicago",
     "linguistics is so cool",
     "French guys are so hot",
     "Sorry I have rehearsal",
