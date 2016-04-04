@@ -21,7 +21,7 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  botResponse = cool();
+  botResponse = "oui oui";
   //ideally, want to either have it equal something else or just edit cool
 
   options = {
