@@ -22,7 +22,6 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
   
-  //begin
   var quotes = [
     "Oui oui",
     "k",
@@ -44,36 +43,21 @@ function postMessage() {
     "Sops on top!",
     "Come drink chamomile tea and read checkhov with me",
     "Anyone else auditioning for the show this quarter?",
-    "( .-. )",
   "( .o.)",
   "( `·´ )",
-  "( ° ͜ ʖ °)",
   "( ͡° ͜ʖ ͡°)",
   "( ⚆ _ ⚆ )",
-  "( ︶︿︶)",
   "( ﾟヮﾟ)",
-  "(\\/)(°,,,°)(\\/)",
   "(¬_¬)",
-  "(¬º-°)¬",
-  "(¬‿¬)",
-  "(°ロ°)☝",
   "(´・ω・)っ",
-  "(ó ì_í)",
   "(ʘᗩʘ')",
-  "(ʘ‿ʘ)",
-  "(̿▀̿ ̿Ĺ̯̿̿▀̿ ̿)̄",
   "(͡° ͜ʖ ͡°)",
-  "ᕦ( ͡° ͜ʖ ͡°)ᕤ",
   "(ಠ_ಠ)",
   "(ಠ‿ಠ)",
-  "(ಠ⌣ಠ)",
-  "(ಥ_ಥ)",
-  "(ಥ﹏ಥ)"
+  "(ಥ_ಥ)"
   ];
-  //end
 
   botResponse = quotes[Math.floor(Math.random() * quotes.length)];
-  //ideally, want to either have it equal something else or just edit cool
 
   options = {
     hostname: 'api.groupme.com',
