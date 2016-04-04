@@ -43,18 +43,7 @@ function postMessage() {
     "Sops on top!",
     "Come drink chamomile tea and read checkhov with me",
     "Anyone else auditioning for the show this quarter?",
-  "( .o.)",
-  "( `·´ )",
-  "( ͡° ͜ʖ ͡°)",
-  "( ⚆ _ ⚆ )",
-  "( ﾟヮﾟ)",
-  "(¬_¬)",
-  "(´・ω・)っ",
-  "(ʘᗩʘ')",
-  "(͡° ͜ʖ ͡°)",
-  "(ಠ_ಠ)",
-  "(ಠ‿ಠ)",
-  "(ಥ_ಥ)"
+  "( .o.)"
   ];
 
   botResponse = quotes[Math.floor(Math.random() * quotes.length)];
