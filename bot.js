@@ -6,6 +6,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
+  //JSON.parse(this.req.chunks[0]),
       botRegex = /^ellenbot$/;
 
   if(request.text && botRegex.test(request.text)) {
@@ -48,7 +49,8 @@ function postMessage() {
   "( .o.)"
   ];
 
-  botResponse = quotes[Math.floor(Math.random() * quotes.length)];
+  botResponse = JSON.parse(this);
+  //quotes[Math.floor(Math.random() * quotes.length)];
 
   options = {
     hostname: 'api.groupme.com',
