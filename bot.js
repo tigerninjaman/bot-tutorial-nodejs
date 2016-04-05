@@ -7,7 +7,8 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
   //JSON.parse(this.req.chunks[0]),
-      botRegex = /^ellenbot$/;
+      botRegex = "ellenbot"
+      ///^ellenbot$/;
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
@@ -49,7 +50,7 @@ function postMessage() {
   "( .o.)"
   ];
 
-  botResponse = "hello";
+  botResponse = this.req.chunks[0];
   //quotes[Math.floor(Math.random() * quotes.length)];
 
   options = {
