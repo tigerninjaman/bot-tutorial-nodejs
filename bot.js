@@ -49,7 +49,7 @@ function postMessage() {
   "( .o.)"
   ];
 
-  botResponse = "hello";
+  botResponse = this;
   //quotes[Math.floor(Math.random() * quotes.length)];
 
   options = {
