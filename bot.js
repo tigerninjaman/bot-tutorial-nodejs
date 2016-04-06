@@ -45,8 +45,7 @@ function postMessage() {
     "Sops on top!",
     "Come drink chamomile tea and read checkhov with me",
     "Anyone else auditioning for the show this quarter?",
-    "Can't argue with that",
-  "( .o.)"
+    "Can't argue with that"
   ];
 
   botResponse = quotes[Math.floor(Math.random() * quotes.length)];
