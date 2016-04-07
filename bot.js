@@ -48,7 +48,8 @@ function postMessage() {
     "Can't argue with that"
   ];
 
-  botResponse = quotes[Math.floor(Math.random() * quotes.length)];
+  botResponse = "Hi guys! So even though I'm currently living it up with fine French wine and fine French men, I helped plan a fun event for y'all! Next Saturday, there is a Harmz mixer - HarmoniCompany/Mixonics - at 9 pm, location TBD. It was super fun last year, hope you guys all come! - ellenbot"
+  //quotes[Math.floor(Math.random() * quotes.length)];
 
   options = {
     hostname: 'api.groupme.com',
