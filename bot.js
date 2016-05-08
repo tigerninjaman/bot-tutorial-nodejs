@@ -39,7 +39,6 @@ function postMessage() {
     "oui",
     "Hey, fuck you, buddy",
     "*wink*",
-    "It's snowing!!",
     "I have a performance that night",
     "TAPS stands for 'The Awesomest Part Of Stanford'",
     "Sops on top!",
